@@ -26,8 +26,8 @@
     button { margin-bottom: 20px; padding: 8px 16px; border: none; background: #007bff; color: #fff; border-radius: 4px; cursor: pointer; }
     button:hover { background: #0056b3; }
   .auto-style1 {
-	font-family: 微軟正黑體;
-}
+	  font-family: 微軟正黑體;
+  }
   </style>
 </head>
 <body>
@@ -118,7 +118,7 @@
         .forEach((p,i) => {
           list.innerHTML += `
             <div class="product-card" onclick="showDetail(${i})">
-              <img src="images/${p.img}" alt="${p.work} - ${p.type}">
+              <img src="product/${p.img}" alt="${p.work} - ${p.type}">
               <h3>${p.work} (${p.type})</h3>
               <p>HK$${p.price}</p>
             </div>
@@ -128,7 +128,7 @@
 
     function showDetail(index) {
       const p = products[index];
-      document.getElementById("detailImg").src = "images/" + p.img;
+      document.getElementById("detailImg").src = "product/" + p.img;
       document.getElementById("detailName").textContent = p.work + " - " + p.type;
       document.getElementById("detailPrice").textContent = "HK$" + p.price;
       document.getElementById("detailDesc").innerHTML = p.detail;
