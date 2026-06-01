@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>未命名 1</title>
+</head>
+
+<body>
+<select id="categoryFilter">
+  <option value="all">全部商品</option>
+  <option value="electronics">電子產品</option>
+  <option value="fashion">時尚服飾</option>
+</select>
+
+<input type="text" id="searchBox" placeholder="搜尋商品名稱">
+<input type="number" id="minPrice" placeholder="最低價">
+<input type="number" id="maxPrice" placeholder="最高價">
+
+<div id="productList"></div>
+
+<script>
+  const sheetId = "12fQ7S_lmJIC-cmbyGSszoEFKvdVp0T4fvpNgTO85_io"; // 表格ID
+  const apiKey = "AIzaSyCGYTWk0YJLIcVyZhIAzYlqS8uB8W9wmsM"; // API金鑰
+  const range = "Sheet1!A:E"; // A:E 包含商品詳情
+
+  async function loadProducts() {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${range}?key=${apiKey}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    const rows = data.values;
+
+    const products = rows.slice(1).map(row => ({
+      name: row[0],
+      price: parseFloat(row[1]),
+      category: row[2],
+      detail: row[3],
+      img: row[4]
+    }));
+
+    function renderProducts(filter, keyword, minPrice, maxPrice) {
+      const list = document.getElementById("productList");
+      list.innerHTML = "";
+      products
+        .filter(p => filter === "all" || p.category === filter)
+        .filter(p => !keyword || p.name.includes(keyword))
+        .filter(p => (!minPrice || p.price >= minPrice) && (!maxPrice || p.price <= maxPrice))
+        .forEach(p => {
+          list.innerHTML += `
+            <div>
+              <img src="images/${p.img}" width="100">
+              <h3>${p.name}</h3>
+              <p>HK$${p.price}</p>
+              <p>${p.detail}</p>
+            </div>
+          `;
+        });
+    }
+
+    document.getElementById("categoryFilter").addEventListener("change", e => {
+      renderProducts(e.target.value, document.getElementById("searchBox").value,
+                     parseFloat(document.getElementById("minPrice").value),
+                     parseFloat(document.getElementById("maxPrice").value));
+    });
+
+    document.getElementById("searchBox").addEventListener("input", e => {
+      renderProducts(document.getElementById("categoryFilter").value, e.target.value,
+                     parseFloat(document.getElementById("minPrice").value),
+                     parseFloat(document.getElementById("maxPrice").value));
+    });
+
+    document.getElementById("minPrice").addEventListener("input", e => {
+      renderProducts(document.getElementById("categoryFilter").value, document.getElementById("searchBox").value,
+                     parseFloat(e.target.value),
+                     parseFloat(document.getElementById("maxPrice").value));
+    });
+
+    document.getElementById("maxPrice").addEventListener("input", e => {
+      renderProducts(document.getElementById("categoryFilter").value, document.getElementById("searchBox").value,
+                     parseFloat(document.getElementById("minPrice").value),
+                     parseFloat(e.target.value));
+    });
+
+    renderProducts("all", "", null, null);
+  }
+
+  loadProducts();
+</script>
+
+</body>
+
+</html>
