@@ -3,7 +3,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>未命名 1</title>
+<title>HARUKA創漫工房</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     .product-card:hover { transform: scale(1.05); }
     .product-card img { max-width: 100%; height: auto; border-radius: 4px; }
     .detail-card { text-align: center; margin-top: 20px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .detail-card img { max-width: 300px; margin-bottom: 20px; }
+    .detail-card img { max-width: 300px; max-height: 500px; width: auto; height: auto; margin-bottom: 20px; }
     button { margin-bottom: 20px; padding: 8px 16px; border: none; background: #007bff; color: #fff; border-radius: 4px; cursor: pointer; }
     button:hover { background: #0056b3; }
   .auto-style1 {
@@ -118,7 +118,7 @@
         .forEach((p,i) => {
           list.innerHTML += `
             <div class="product-card" onclick="showDetail(${i})">
-              <img src="product/${p.img}" alt="${p.work} - ${p.type}">
+              <img src="images/${p.img}" alt="${p.work} - ${p.type}">
               <h3>${p.work} (${p.type})</h3>
               <p>HK$${p.price}</p>
             </div>
@@ -128,7 +128,7 @@
 
     function showDetail(index) {
       const p = products[index];
-      document.getElementById("detailImg").src = "product/" + p.img;
+      document.getElementById("detailImg").src = "images/" + p.img;
       document.getElementById("detailName").textContent = p.work + " - " + p.type;
       document.getElementById("detailPrice").textContent = "HK$" + p.price;
       document.getElementById("detailDesc").innerHTML = p.detail;
