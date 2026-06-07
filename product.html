@@ -18,8 +18,21 @@
     h2 { margin-bottom: 10px; }
     .filter-bar { margin-bottom: 20px; }
     select, input { margin-right: 10px; padding: 5px; }
-    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); /* 每行固定 4 個商品 */gap: 20px;}
-    .product-card { border: 1px solid #ddd; padding: 10px; text-align: center; background: #fff; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+   .product-grid {  splay: grid;grid-template-columns: repeat(4, 1fr); /* 每行固定 4 欄 */
+  gap: 20px; /* 卡片間距 */
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 200px;   /* 保持原本卡片寬度 */
+  height: auto;   /* 高度依內容自動 */
+  margin: auto;   /* 置中顯示 */
+}
     .product-card:hover { transform: scale(1.05); }
     .product-card img { max-width: 100%; height: auto; border-radius: 4px; }
     .detail-card { text-align: center; margin-top: 20px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
