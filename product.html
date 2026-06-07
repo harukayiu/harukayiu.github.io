@@ -126,15 +126,25 @@
         });
     }
 
-    function showDetail(index) {
-      const p = products[index];
-      document.getElementById("detailImg").src = "product/" + p.img;
-      document.getElementById("detailName").textContent = p.work + " - " + p.type;
-      document.getElementById("detailPrice").textContent = "HK$" + p.price;
-      document.getElementById("detailDesc").innerHTML = p.detail;
-      document.getElementById("productList").style.display = "none";
-      document.getElementById("productDetail").style.display = "block";
-    }
+function showDetail(index) {
+  const p = products[index];
+  document.getElementById("detailImg").src = "product/" + p.img;
+  document.getElementById("detailName").textContent = p.work + " - " + p.type;
+  document.getElementById("detailPrice").textContent = "HK$" + p.price;
+
+  // 用表格顯示商品詳情
+  document.getElementById("detailDesc").innerHTML = `
+    <table style="margin:auto; border-collapse: collapse; width:80%;">
+      <tr><td style="border:1px solid #ddd; padding:8px;">作品類別</td><td style="border:1px solid #ddd; padding:8px;">${p.work}</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:8px;">商品類別</td><td style="border:1px solid #ddd; padding:8px;">${p.type}</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:8px;">價格</td><td style="border:1px solid #ddd; padding:8px;">HK$${p.price}</td></tr>
+      <tr><td style="border:1px solid #ddd; padding:8px;">商品詳情</td><td style="border:1px solid #ddd; padding:8px;">${p.detail}</td></tr>
+    </table>
+  `;
+
+  document.getElementById("productList").style.display = "none";
+  document.getElementById("productDetail").style.display = "block";
+}
 
     function closeDetail() {
       document.getElementById("productDetail").style.display = "none";
