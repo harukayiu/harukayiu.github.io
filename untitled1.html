@@ -5,9 +5,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>■ 更新情況 ■</title>
 <style type="text/css">
-.auto-style1 {
-	color: #FFFFFF;
-}
 .auto-style3 {
 	color: #4F7ED7;
 }
@@ -18,34 +15,10 @@
 	margin-right: 0cm;
 	margin-top: 0cm;
 	margin-bottom: .0001pt;
-}
-.auto-style5 {
-	color: #F0F8FF;
-}
-.auto-style6 {
-	font-family: Arial;
+	font-family: 微軟正黑體;
 }
 .auto-style7 {
 	color: #4577D5;
-}
-.auto-style8 {
-	text-align: center;
-}
-.auto-style11 {
-	margin-top: 0;
-}
-.auto-style12 {
-	margin-top: 0;
-	margin-bottom: 0;
-}
-.auto-style13 {
-	line-height: 150%;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-.auto-style15 {
-	margin-top: 1px;
-	margin-bottom: 1px;
 }
 .auto-style17 {
 	color: #4F7ED7;
@@ -61,9 +34,6 @@
 .auto-style20 {
 	font-size: small;
 }
-.auto-style21 {
-	font-size: medium;
-}
 .auto-style22 {
 	color: #4371C7;
 }
@@ -77,31 +47,109 @@
 .auto-style25 {
 	font-family: 微軟正黑體;
 	margin-top: 1px;
-	margin-bottom: 1px;
+	margin-bottom: 0;
 }
 .auto-style27 {
 	font-family: Arial;
-	font-size: large;
+	font-size: xx-large;
 }
 .auto-style28 {
 	font-family: 微軟正黑體;
 	font-size: xx-large;
 }
-.auto-style30 {
-	font-size: medium;
-	color: #FFFFFF;
-}
 .auto-style31 {
 	color: #000000;
 }
-.auto-style32 {
-	font-family: 微軟正黑體;
-	text-align: center;
-	margin-top: 1px;
-	margin-bottom: 1px;
-}
+
 </style>
 <base target="_self" />
+<style>
+.slide {
+      width: 600px;
+      height: 400px;
+      display: flex;
+      align-items: center;    /* 垂直置中 */
+      justify-content: center;/* 水平置中 */
+      background-color: #000; /* 左右不足時填充 */
+      flex-shrink: 0;         /* 防止被壓縮 */
+    }
+
+ .carousel {
+      width: 600px;    /* 固定容器寬度 */
+      height: 400px;   /* 固定容器高度 */
+      overflow: hidden;
+      background-color: #000; /* 背景填充顏色，可改成白色或品牌色 */
+    }
+
+   .slides {
+      display: flex;
+      transition: transform 0.8s ease-in-out;
+    }
+    
+
+    .slides img {
+      max-height: 100%; /* 不超過容器高度 */
+      max-width: 100%;  /* 不超過容器寬度 */
+      width: auto;       /* 按比例縮放寬度 */
+      height: auto;      /* 按比例縮放高度 */ 
+      object-fit: contain;
+    }
+    
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;  
+      transform: translateX(-50%);
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .auto-style38 {
+	font-size: xx-large;
+}
+.auto-style37 {
+	font-size: large;
+}
+.auto-style39 {
+	font-family: Arial;
+	font-size: large;
+}
+    .auto-style40 {
+	color: #3366CC;
+	font-size: large;
+}
+.auto-style41 {
+	font-family: 微軟正黑體;
+	font-size: large;
+}
+.auto-style42 {
+	color: #4577D5;
+	font-size: xx-large;
+}
+.auto-style43 {
+	color: #4577D5;
+	font-size: large;
+}
+.auto-style44 {
+	font-family: 微軟正黑體;
+	font-size: xx-large;
+	color: #4577D5;
+}
+.auto-style45 {
+	font-family: 微軟正黑體;
+	font-size: medium;
+}
+.auto-style46 {
+	font-size: medium;
+}
+    </style>
+
 </head>
 
 <body style="background-color: #F9FCFF">
@@ -117,53 +165,54 @@
 <table border="0" bordercolor="#111111" cellpadding="0" cellspacing="0" class="auto-style46">
 	<tr>
 		<td class="auto-style17" height="32" style="width: 271px" valign="top">
-		<span class="auto-style28">■</span><font size="3"><span class="auto-style31"><strong><span class="auto-style24"> 
-		更新情況</span></strong></span></font><font class="style3"><span class="auto-style61" style="color: #993366"><span xml:lang="EN-US" class="auto-style24">
+		<span class="auto-style28">■</span><strong><font size="3"><span class="auto-style31"><span class="auto-style24"> 
+		</span></span></font><span class="auto-style24"> 
+		<span class="auto-style40">更新情況</span></span></strong><font class="style3"><span class="auto-style61" style="color: #993366"><span xml:lang="EN-US" class="auto-style24">
 		</span></span><span class="auto-style69">
 		<span class="auto-style28" lang="EN-US" xml:lang="EN-US">■</span></span></font><span lang="EN-US" xml:lang="EN-US"><hr color="#4F60B0" noshade="noshade" />
 		</span></td>
 		<td class="auto-style17" height="32" style="width: 33px" valign="top">
 		<p class="auto-style62" style="margin: 0cm; margin-bottom: .0001pt">　</p>
 		</td>
-		<td class="auto-style17" colspan="3" height="32" valign="top">
-		<span style="color: #993366"><font size="3" class="auto-style22"><strong>
-		<span class="auto-style24">■</span><span class="auto-style31"><span class="auto-style24"> 
-		同人販賣情報</span></span></strong></font></span><span class="auto-style22"><font class="style3"><span class="auto-style61"><span xml:lang="EN-US" class="auto-style6">
+		<td class="auto-style17" height="32" valign="top" style="width: 713px">
+		<span lang="EN-US" xml:lang="EN-US">
+		<span style="color: #993366">
+		<span class="auto-style24"><strong>
+		<span class="auto-style38"><font class="auto-style22">■</font></span><font size="3" class="auto-style22"> </font>
+		<span class="auto-style37"><font class="auto-style22">同人販賣情報</font></span></strong></span></span><span class="auto-style22"><font class="style3"><span class="auto-style61"><span xml:lang="EN-US" class="auto-style39"><strong>
+		</strong>
 		</span></span><span class="auto-style69">
-		<span class="auto-style27" lang="EN-US" xml:lang="EN-US">■</span></span></font></span><span lang="EN-US" xml:lang="EN-US"><hr color="#4F60B0" noshade="noshade" />
+		<span class="auto-style27" lang="EN-US" xml:lang="EN-US">■</span></span></font></span><hr color="#4F60B0" noshade="noshade" />
 		</span></td>
 	</tr>
 	<tr>
-		<td class="auto-style17" style="height: 237px; width: 271px;" valign="top">
+		<td class="auto-style17" style="height: 169px; width: 271px;" valign="top">
 		<p style="margin-top: 0; margin-bottom: 0">
-		<textarea cols="36" name="S1" rows="7" style="border: 1px solid #4371C7">11.4.2023 RG29活動情報
-20.3.2023 更新產品推介
-28.2.2022 DOUJIN加入商店
-          更新產品推介</textarea></p>
+		<textarea cols="36" name="S1" rows="7" style="border: 1px solid #4371C7">3.6.2026 更新產品推介+同人活動情報
+          </textarea></p>
 		<p style="margin-top: 0; margin-bottom: 0">　</p>
 		<p style="margin-top: 0; margin-bottom: 0">　</p>
 		<p style="margin-top: 0; margin-bottom: 0"><span style="color: #993366">
-		<font color="#4F60B0" size="3"><strong><span class="auto-style31">
-		<span class="auto-style1"><span class="auto-style24">■</span></span><span class="auto-style24"> 
-		同人活動情報 </span><span class="auto-style1"><span class="auto-style24">■</span></span></span></strong></font></span></p>
+		<font color="#4F60B0" size="3"><strong><span class="auto-style24">
+		<span class="auto-style42">■</span> <span class="auto-style43">
+		同人活動情報 </span><font class="style3"><span class="auto-style69">
+		<span class="auto-style44" lang="EN-US" xml:lang="EN-US">■</span></span></font></span></strong></font></span></p>
 		<hr color="#000080" />
-		<p class="auto-style4"><span class="auto-style24">&nbsp;</span><span class="auto-style19"><strong>Rainbow Gala 
-		29</strong></span></p>
+		<p class="auto-style4"><strong>創天綜合同人祭 (香港動漫節)</strong></p>
 		<p class="auto-style19" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		<strong>日期 : 2023年5月7日 (SUN) </strong></p>
+		<strong>日期 : 2026年7月24日 (Fri)-28(TUE) </strong></p>
 		<p class="auto-style19" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		<strong>時間 : 12:00PM - 7:30PM</strong></p>
+		<strong>時間 : 待定</strong></p>
 		<p class="auto-style19" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		<strong>地點 : 九龍灣國際展貿中心 </strong></p>
+		<strong>地點 : 香港會議展覽中心HALL3</strong></p>
 		<p class="auto-style19" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 展貿廳2&amp;3</strong></p>
-		<p class="auto-style19" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		<strong>檔位 : Orange 16 (6/F)</strong></p>
+		<strong>檔位 : 待定</strong></p>
 		<p class="auto-style3" style="margin-bottom: .0001pt; word-spacing: 1; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm">
-		&nbsp;</p>
+		<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="500" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fy.haruka&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" style="border: none; overflow: hidden" width="340" id="I1" name="I1">
+		</iframe></p>
 		</td>
-		<td height="230" rowspan="17" style="width: 33px"></td>
-		<td class="auto-style17" colspan="3" style="height: 237px" valign="top">
+		<td rowspan="2" style="width: 33px"></td>
+		<td class="auto-style17" style="height: 169px; width: 713px;" valign="top">
 		<p style="margin-top: 1; margin-bottom: 1"><font color="#3366CC">
 		<span class="auto-style35"><span class="auto-style24"><strong>**更多的販賣資訊 、預留及通販</strong></span><font style="font-size: 14pt"><span class="auto-style24"><strong>，</strong></span></font><span class="auto-style24"><strong>請往</strong></span></span></font><span class="auto-style24"><font color="#3366CC"><strong>DOUJIN進入商店!!!</strong></font></span></p>
 		<div id="doc">
@@ -176,38 +225,27 @@
 									<div id="web" role="main">
 										<div>
 											<h3 style="margin-top: 1; margin-bottom: 1">
-											<br class="auto-style31" />
 											<span class="auto-style24">温馨提示: </span>
 											<br class="auto-style24" />
 											</h3>
-											<p class="auto-style15" style="margin-top: 1; margin-bottom: 1">
+											<h3 style="margin-top: 1; margin-bottom: 1">
 											<font color="#3366CC">
-											<font style="font-size: 14pt">
-											<span class="auto-style24" lang="zh-hk">￭</span><span class="auto-style24">
-											</span></font></font>
-											<span class="auto-style7"><strong>
-											<span class="auto-style24">5月8日Rainbow 
-											Gala 29見!!!</span></strong></span></p>
-											<p class="auto-style15" style="margin-top: 1; margin-bottom: 1">
+											<font class="auto-style46">
+											<span class="auto-style24" lang="zh-hk">￭</span><span class="auto-style24">2026年</span></font></font><span class="auto-style7"><strong><span class="auto-style45">7月24日-28日創天同人祭見!!!</span></strong></span></h3>
+											<h3 style="margin-top: 1; margin-bottom: 1">
 											<font color="#3366CC">
-											<font class="auto-style21">
+											<font class="auto-style46">
 											<span class="auto-style24" lang="zh-hk">
 											<strong>￭</strong></span><span class="auto-style24"><strong> 
-											歡迎通販購買，可於DOUJIN進入商店瀏覽商品</strong></span></font></font></p>
-											<p class="auto-style15" style="margin-top: 1; margin-bottom: 1">
+											歡迎通販購買，可於DOUJIN進入商店瀏覽商品</strong></span></font></font></h3>
+											<h3 style="margin-top: 1; margin-bottom: 1">
 											<font color="#3366CC">
-											<font class="auto-style21">
-											<span class="auto-style24" lang="zh-hk"><strong>￭</strong></span><span class="auto-style24"><strong> 
+											<font class="auto-style46">
+											<span class="auto-style24" lang="zh-hk">
+											<strong>￭</strong></span><span class="auto-style24"><strong> 
 											歡迎電子支付(ALIPAY、PAYME) </strong>
-											</span></font></font></p>
-											<p class="auto-style25" style="margin-top: 1; margin-bottom: 1">
-											&nbsp;</p>
-											<p class="auto-style25" style="margin-top: 1; margin-bottom: 1">
-											&nbsp;</p>
-											<p class="auto-style25" style="margin-top: 1; margin-bottom: 1">
-											&nbsp;</p>
-											<p class="auto-style25" style="margin-top: 1; margin-bottom: 1">
-											&nbsp;</p>
+											</span></font></font>
+											</h3>
 											<p class="auto-style25" style="margin-top: 1; margin-bottom: 1">
 											&nbsp;</p>
 										</div>
@@ -222,177 +260,73 @@
 		<p style="margin-top: 0; margin-bottom: 0;">
 		<span style="color: #993366"><strong>
 		<font class="auto-style7">
-		<span class="auto-style28">■</span></font><font size="3" class="auto-style23"><span class="auto-style31"><span class="auto-style63">
-		<span class="auto-style24">產</span></span></span></font></strong></span><span class="auto-style7" xml:lang="EN-US"><span class="auto-style18"><span class="auto-style24"><strong><span class="auto-style21">品推介</span></strong>
+		<span class="auto-style28">■</span></font><span class="auto-style63"><font size="3" class="auto-style23"><span class="auto-style31"> </span></font>
+		<font class="auto-style7">
+		<span class="auto-style41">產</span></font></span></strong></span><span class="auto-style7" xml:lang="EN-US"><span class="auto-style18"><span class="auto-style24"><strong><span class="auto-style37">品推介</span></strong>
 		<span style="color: #993366"><strong>
 		<font class="auto-style7">
 		<span class="auto-style28">■</span></font><font size="3" class="auto-style23"><span class="auto-style31"><span class="auto-style63">
 		</span></span></font></strong></span></span></span></span></p>
+		<p style="margin-top: 0; margin-bottom: 0;">
+		&nbsp;</p>
+		 <div class="carousel">
+  <div class="slides">
+     <div class="slide"><img src="product/lost.jpg" alt="Slide 1"></div>
+     <div class="slide"><img src="product/spy.jpg" alt="Slide 2"></div>
+     <div class="slide"><img src="product/hero.jpg" alt="Slide 3"></div>
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+</div>
+  
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>首頁輪播圖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 輪播圖結構 -->
+
+  <!-- 插入 JavaScript -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelector('.slides');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = dots.length;
+
+    function showSlide(index) {
+      slides.style.transform = `translateX(-${index * 600}px)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+
+    function currentSlide(index) {
+      currentIndex = index;
+      showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 5000);
+    showSlide(currentIndex);
+  </script>
+
 		</td>
 	</tr>
 	<tr>
-		<td class="auto-style17" rowspan="9" style="width: 271px" valign="top">
-		<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" frameborder="0" height="500" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fy.haruka&amp;tabs=timeline&amp;width=340&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" style="border: none; overflow: hidden" width="340">
-		</iframe></td>
-		<td bgcolor="#6699FF" class="auto-style17" style="width: 371px; height: 32;">
-		<p class="auto-style25" style="margin-top: 0; margin-bottom: 0; width: 374px;">
-		<span class="auto-style55"><strong>
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style1">《</span></font><span class="auto-style1">The 
-		Lost</span></strong></span><strong><span class="auto-style56"><font class="auto-style32" color="#FFFFFF"><span class="auto-style1">》</span></font></span>
-		<span class="auto-style1">(一般向原創本)</span></strong></p>
-		</td>
-		<td style="width: 36px; height: 31px;">
-		<p align="center" style="margin-top: 0; margin-bottom: 0"></p>
-		</td>
-		<td bgcolor="#6699FF" class="auto-style73" style="height: 32; width: 380;">
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style6">
-		《SPY X FAMILY》</span></font><strong><font class="auto-style32" color="#FFFFFF"><span class="auto-style1">Q版</span><span class="auto-style1" lang="zh-tw">亞克力</span></font><span class="auto-style5">鎖匙扣</span></strong></td>
-	</tr>
-	<tr>
-		<td class="auto-style8" style="height: 82px; width: 371px;"><br />
-		<input class="auto-style24" height="200" name="Image7" src="product/lost%20cover%20a.jpg" type="image" width="140" /></td>
-		<td style="height: 82px; width: 36px;">
-		<p style="margin-top: 0; margin-bottom: 0"></p>
-		</td>
-		<td class="auto-style25" style="height: 82px; width: 391px;">
-		<input height="205" name="Image14" src="product/spy.jpg" type="image" width="346" /></td>
-	</tr>
-	<tr>
-		<td class="auto-style11" style="width: 371px"></td>
-		<td style="width: 36px"></td>
-		<td class="auto-style11" style="width: 391px"></td>
-	</tr>
-	<tr>
-		<td bgcolor="#6699FF" class="auto-style28" style="width: 371px; height: 33px;">
-		<strong><span class="auto-style56">
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style21">《</span></font><span class="auto-style30">鬼滅之刃</span></span><span class="auto-style21"><font class="auto-style32" color="#FFFFFF">》Q版<span lang="zh-tw">亞克力</span></font></span><span class="auto-style56"><span class="auto-style30">鎖匙扣</span></span></strong></td>
-		<td style="width: 36px; height: 33px;">
-		<p align="center" style="margin-top: 0; margin-bottom: 0"></p>
-		</td>
-		<td bgcolor="#6699FF" class="auto-style17" style="height: 33px; width: 380;">
-		<p align="center" class="auto-style55" style="margin-top: 0; margin-bottom: 0">
-		<strong><font class="auto-style32" color="#FFFFFF">
-		<span class="auto-style1">《</span></font><span class="auto-style1">鬼滅之刃</span><font class="auto-style32" color="#FFFFFF"><span class="auto-style1">》</span></font><span class="auto-style1">POSTCARD</span></strong></p>
-		</td>
-	</tr>
-	<tr>
-		<td class="auto-style32" style="height: 182px; width: 371px;">
-		<form method="post">
-			&nbsp;
-			<input height="180" name="Image9" src="product/edge.jpg" type="image" width="287" /></form>
-		</td>
-		<td style="height: 182px; width: 36px;">
-		<p style="margin-top: 0; margin-bottom: 0"></p>
-		</td>
-		<td class="auto-style25" style="height: 82px; width: 391px;">
-		<form method="post">
-			<input height="179" name="Image10" src="product/edge1.jpg" type="image" width="340" /></form>
-		</td>
-	</tr>
-	<tr>
-		<td class="auto-style12" style="width: 371px"></td>
-		<td style="width: 36px"></td>
-		<td class="auto-style12" style="width: 391px"></td>
-	</tr>
-	<tr>
-		<td bgcolor="#6699FF" class="auto-style17" style="height: 32; width: 371px;">
-		<p align="center" style="margin-top: 0; margin-bottom: 0">
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style1">《我</span><strong><span class="auto-style1">的英雄學》Q版</span><span class="auto-style1" lang="zh-tw">亞克力</span><span class="auto-style1">鎖匙扣</span></strong></font></p>
-		</td>
-		<td style="height: 33px; width: 36px;">
-		<p style="margin-top: 0; margin-bottom: 0"></p>
-		</td>
-		<td bgcolor="#6699FF" class="auto-style17" style="width: 380; height: 32;">
-		<p align="center" class="auto-style7" style="margin-top: 0; margin-bottom: 0">
-		<strong><span class="auto-style56">
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style1">《</span></font><span class="auto-style1">排球少年</span><span class="auto-style1" lang="zh-tw"><font class="auto-style32" color="#FFFFFF"><span class="auto-style1">》</span></font></span></span><font class="auto-style32" color="#FFFFFF"><span class="auto-style1">Q版</span><span class="auto-style1" lang="zh-tw">亞克力</span><span class="auto-style1">鎖匙扣</span></font></strong></p>
-		</td>
-	</tr>
-	<tr>
-		<td class="auto-style32" style="height: 183px; width: 371px;">
-		<input height="181" name="Image11" src="product/hero.jpg" type="image" width="269" /></td>
-		<td style="height: 183px; width: 36px;"></td>
-		<td class="auto-style32" style="height: 182px; width: 391px;">
-		<form method="post">
-			<input height="183" name="Image5" src="product/V2.jpg" type="image" width="300" /></form>
-		</td>
-	</tr>
-	<tr>
-		<td style="width: 371px"></td>
-		<td style="width: 36px;"></td>
-		<td class="auto-style12" style="width: 391px"></td>
-	</tr>
-	<tr>
-		<td height="230" rowspan="7" style="height: 115px; width: 271px;">&nbsp;</td>
-		<td class="auto-style20" style="width: 371px; height: 32"><strong>
-		<font color="#FFFFFF"><span class="auto-style35">《HUNTER X HUNTER》</span></font></strong><font color="#FFFFFF"><span class="auto-style35">透明書籤</span></font></td>
-		<td style="height: 32px; width: 36px;"></td>
-		<td bgcolor="#6699FF" class="auto-style17" style="height: 32; width: 380;">
-		<p class="auto-style25" style="margin-top: 0; margin-bottom: 0">
-		<font class="auto-style32" color="#FFFFFF"><span class="auto-style1">《</span><strong><span class="auto-style1">由零開始的異世界生活》Q版</span><span class="auto-style1" lang="zh-tw">亞克力</span><span class="auto-style1">鎖匙扣</span></strong></font></p>
-		</td>
-		<td style="height: 32px" width="670"></td>
-	</tr>
-	<tr>
-		<td class="auto-style32" style="width: 371px; height: 194px">
-		<input height="192" name="Image13" src="https://snz04pap001files.storage.live.com/y4m553Sy6soKsvmkzcKXq5mQeH8JpzTivNBkDY2HGkqMErF2pMZ_N0rEV9pQYNdC8aIzt7q6rcTrlQjCuP66OadQ0LvKhto5kDO5ZxWuJLncEgv4Npljr6lAiggzfWv_rz1mXeyyDbPMwYGU9LzTzR2HrFTVtVut8VbOHSDmM1LAT5dGknH9JWD_vpEtL2y_N_s?width=256&amp;height=173&amp;cropmode=none" type="image" width="282" /></td>
-		<td style="height: 194px; width: 36px;"></td>
-		<td class="auto-style32" style="height: 183px; width: 391px;">
-		<input height="192" name="Image12" src="https://snz04pap001files.storage.live.com/y4m_HXp-sUJahRDS9oVoUOvjQO1AGgTTGvni9_RxSGTVxMvlRmtEnj5MzlxuWAJtxgWveV22KqEOcaVCVWgNQcwYxElP-DUckU7r-COPcEH8CnWXMf0QvXqa5RZhsNIhnALvIokFQmAHZijJUx02N7KdHgKpMKA8C_pbVo3DbbLw0wpV5TW7LBSmB8fs6CEy3MT?width=256&amp;height=192&amp;cropmode=none" type="image" width="256" /></td>
-		<td style="height: 194px" width="670"></td>
-	</tr>
-	<tr>
-		<td class="auto-style13" style="width: 371px; height: 18px"></td>
-		<td style="height: 18px; width: 36px;"></td>
-		<td style="width: 391px; height: 18px"></td>
-		<td style="height: 18px" width="670"></td>
-	</tr>
-	<tr>
-		<td class="auto-style72" style="width: 371px; height: 32">
-		<font color="#FFFFFF"><span class="auto-style35"><strong>《<span class="auto-style56">百變小櫻Clear 
-		Card</span>》</strong>眼鏡布</span></font></td>
-		<td style="height: 15px; width: 36px;"></td>
-		<td class="auto-style72" style="width: 380; height: 32">
-		<font color="#FFFFFF"><span class="auto-style35">《銀魂》透明書籤</span></font></td>
-		<td style="height: 15px" width="670"></td>
-	</tr>
-	<tr>
-		<td class="auto-style32" style="width: 371px; height: 211px">
-		<input height="169" name="Image3" src="https://snz04pap001files.storage.live.com/y4mx8minXLoHp26C3j4kcDorOoCQsAHTvUft6QOWqvdIag2plv5HxeOYNqpd0oiz_Koe-ZPjBS3j43FWuNEUUK0ZDZl9kwobYqCo9ej3tdKIPIW_Z90eqHMU2bTDEMgjzmK9MHhejqsN2il7tY4ExkTR9NOEcX3xpcHnAUqeG-9urIGro8nRYDPismI3oUJbXMa?width=256&amp;height=145&amp;cropmode=none" type="image" width="292" /></td>
-		<td style="height: 211px; width: 36px;"></td>
-		<td class="auto-style32" style="height: 211px; width: 391px">
-		<input height="191" name="Image6" src="https://hfysdg.ch.files.1drv.com/y4mHJ0m289fNSGVHZR0gYiN22R5hLcREDqIOeuolZ9W-jiR6P7IBxuRSCSEkJiYnfuQ_aw8UHdvJ7tud8DFd8kvUNkSduTaxwM1xMugtclbfuMmnPzwFZvZj2s62NEf6ewA-KgnbhT4F0ZsneP8emYPEemiRwbDylL_OESb6NhEvxyx0wV25m_hUf9nUWuqILXgqkn7IiLGSQEUcSChEYuIAA?width=660&amp;height=440&amp;cropmode=none" type="image" width="288" /></td>
-		<td style="height: 211px" width="670"></td>
-	</tr>
-	<tr>
-		<td class="auto-style13" style="width: 371px; height: 185px"><br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		</td>
-		<td style="height: 185px; width: 36px;"></td>
-		<td style="height: 185px; width: 391px"></td>
-		<td style="height: 185px" width="670">　<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		<p>　</p>
-		</td>
-	</tr>
-	<tr>
-		<td colspan="3" height="29">&nbsp;</td>
-	</tr>
-</table>
+		<td style="width: 271px;">&nbsp;		
+		<td class="auto-style20" style="width: 713px; "><strong>
+		
+		</tr>
+	</table>
 
 
 </body>
