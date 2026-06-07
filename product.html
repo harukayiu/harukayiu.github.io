@@ -18,8 +18,8 @@
     h2 { margin-bottom: 10px; }
     .filter-bar { margin-bottom: 20px; }
     select, input { margin-right: 10px; padding: 5px; }
-    .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); /* 每行固定 4 欄 */ gap: 20px; /* 卡片間距 */ }
-.product-card {
+    .product-grid { display: grid; grid-template-columns: repeat(4, auto); /* 固定 4 欄，每欄寬度依卡片尺寸 */justify-content: center; /* 置中排列 */ gap: 20px; /* 卡片間距 */ }
+ .product-card {
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
