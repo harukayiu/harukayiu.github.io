@@ -96,7 +96,7 @@
       products = rows.slice(1).map(row => ({
         work: row[0],     // 作品類別 (A)
         type: row[1],     // 商品類別 (B)
-        price: parseFloat(row[2]), // 價格 (C)
+        price: row[2], // 價格 (C)
         detail: row[3],   // 商品詳情 (D)
         img: row[4]       // 圖片檔名 (E)
       }));
