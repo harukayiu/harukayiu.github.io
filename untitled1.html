@@ -101,14 +101,19 @@
       left: 50%;  
       transform: translateX(-50%);
     }
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
+   .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+
     }
     .auto-style38 {
 	font-size: xx-large;
@@ -327,29 +332,29 @@
 
   <!-- 插入 JavaScript -->
   <script>
-    let currentIndex = 0;
-    const slides = document.querySelector('.slides');
-    const dots = document.querySelectorAll('.dot');
-    const totalSlides = dots.length;
+   let currentIndex = 0;
+const slides = document.querySelector('.slides');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = dots.length;
 
-    function showSlide(index) {
-      slides.style.transform = `translateX(-${index * 600}px)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
+function showSlide(index) {
+  slides.style.transform = `translateX(-${index * 600}px)`; // 以容器寬度為基準
+  dots.forEach(dot => dot.classList.remove('active')); // 清除所有 active
+  dots[index].classList.add('active'); // 只給當前的 dot 加 active
+}
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }
+function currentSlide(index) {
+  currentIndex = index;
+  showSlide(currentIndex);
+}
 
-    function currentSlide(index) {
-      currentIndex = index;
-      showSlide(currentIndex);
-    }
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  showSlide(currentIndex);
+}
 
-    setInterval(nextSlide, 5000);
-    showSlide(currentIndex);
+setInterval(nextSlide, 5000);
+showSlide(currentIndex);
   </script>
 
 		</td>
