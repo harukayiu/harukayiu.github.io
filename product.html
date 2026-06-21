@@ -160,16 +160,6 @@
         opt.textContent = c;
         typeFilter.appendChild(opt);
       });
-      
-      onst detailImg = document.getElementById("detailImg");
-  
-      // 在觸控裝置上用點擊切換放大/縮小
-      detailImg.addEventListener("click", () => {
-      // 判斷是否觸控裝置
-      if (matchMedia("(hover: none)").matches) {
-      detailImg.classList.toggle("zoomed");
-    }
-  });
 
       renderProducts("all", "all", "");
     }
@@ -194,8 +184,10 @@
 
 function showDetail(index) {
   const p = products[index];
-  document.getElementById("detailImg").src = "product/" + p.img;
+  const detailImg = document.getElementById("detailImg");
 
+  detailImg.src = "product/" + p.img;
+  
   // 用表格顯示商品詳情，表格寬度填滿外框
   document.getElementById("detailDesc").innerHTML = `
     <table style="margin:auto; border-collapse: collapse; width:100%;">
@@ -217,6 +209,13 @@ function showDetail(index) {
       </tr>
     </table>
   `;
+  
+   // 在觸控裝置上用點擊切換放大/縮小
+  detailImg.addEventListener("click", () => {
+    if (matchMedia("(hover: none)").matches) {
+      detailImg.classList.toggle("zoomed");
+    }
+  });
 
   document.getElementById("productList").style.display = "none";
   document.getElementById("productDetail").style.display = "block";
