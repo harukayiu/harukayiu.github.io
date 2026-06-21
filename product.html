@@ -36,15 +36,22 @@
   .auto-style1 {
 	  font-family: 微軟正黑體;
   }
-  .detail-card img {
+.detail-card img {
   max-width: 600px;
-  transition: transform 0.3s ease; /* 平滑動畫 */
+  transition: transform 0.3s ease;
 }
 
-.detail-card img:hover {
-  transform: scale(1.5); /* 放大 1.5 倍 */
+/* 桌面：滑鼠移上去放大 */
+@media (hover:hover) {
+  .detail-card img:hover {
+    transform: scale(1.5);
+  }
 }
 
+/* 平板/手機：點擊切換放大 */
+.detail-card img.zoomed {
+  transform: scale(1.5);
+}
 
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -152,6 +159,16 @@
         opt.textContent = c;
         typeFilter.appendChild(opt);
       });
+      
+      onst detailImg = document.getElementById("detailImg");
+  
+      // 在觸控裝置上用點擊切換放大/縮小
+      detailImg.addEventListener("click", () => {
+      // 判斷是否觸控裝置
+      if (matchMedia("(hover: none)").matches) {
+      detailImg.classList.toggle("zoomed");
+    }
+  });
 
       renderProducts("all", "all", "");
     }
