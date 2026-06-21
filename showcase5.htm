@@ -1,0 +1,121 @@
+﻿<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>新八夢遊眼鏡王國</title>
+
+<Script language="JavaScript">
+<!--
+if (window.Event) 
+  document.captureEvents(Event.MOUSEUP); 
+ 
+function nocontextmenu() 
+{
+ event.cancelBubble = true
+ event.returnValue = false;
+ 
+ return false;
+}
+ 
+function norightclick(e) 
+{
+ if (window.Event) 
+ {
+  if (e.which == 2 || e.which == 3)
+   return false;
+ }
+ else
+  if (event.button == 2 || event.button == 3)
+  {
+   event.cancelBubble = true
+   event.returnValue = false;
+   return false;
+  }
+ 
+}
+ 
+document.oncontextmenu = nocontextmenu;  // for IE5+
+document.onmousedown = norightclick;  // for all others
+//-->
+
+
+
+</script>
+
+
+<style type="text/css">
+.auto-style17 {
+	font-family: 微軟正黑體;
+}
+.auto-style18 {
+	font-size: 24pt;
+}
+</style>
+
+
+</head>
+
+
+<SCRIPT language=javascript>
+<!--
+var openmode=1
+var targetframe="I1"
+function jumpbox(){
+var destination=eval("window.parent."+targetframe)
+var thebox=document.menu
+if (openmode==2)
+destination=window.parent
+destination.location=
+thebox.menu.options[thebox.menu.selectedIndex].value
+}
+//-->
+</SCRIPT>
+
+<META content="Microsoft FrontPage 12.0" name=GENERATOR></HEAD>
+<BODY>
+<P align=center><strong>
+		<font color="#4371C7" class="auto-style18">
+		<span style="text-decoration: none" class="auto-style17">LOST</span></font></strong></P>
+<FORM>
+<P align=center><SELECT style="FONT-SIZE: 10pt" 
+onchange="eval(this.options[this.selectedIndex].value );" size=1 name=choice> 
+   <OPTION value="I1.location='lost/lost01.jpg';" 
+  selected>第1頁</OPTION> <OPTION 
+  value="I1.location='lost/lost02.jpg';">第2頁</OPTION> 
+  <OPTION 
+  value="I1.location='lost/lost03.jpg';">第3頁</OPTION> 
+  <OPTION 
+  value="I1.location='lost/lost04.jpg';">第4頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost05.jpg';">第5頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost06.jpg';">第6頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost07.jpg';">第7頁</OPTION>   
+  </SELECT> 
+</P></FORM>
+<P align=center>
+<IFRAME name=I1 src="lost/lost01.jpg" 
+width=860 height=1170 border="0" frameborder="0">您的瀏覽器不支援內置框架或目前的設定為不顯示內置框架。</IFRAME></P>
+<FORM>
+<P align=center>
+<SELECT style="FONT-SIZE: 10pt" 
+onchange="eval(this.options[this.selectedIndex].value );" size=1 name=choice0> 
+   <OPTION value="I1.location='lost/lost01.jpg';" 
+  selected>第1頁</OPTION> <OPTION 
+  value="I1.location='lost/lost02.jpg';">第2頁</OPTION> 
+  <OPTION 
+  value="I1.location='lost/lost03.jpg';">第3頁</OPTION> 
+  <OPTION 
+  value="I1.location='lost/lost04.jpg';">第4頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost05.jpg';">第5頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost06.jpg';">第6頁</OPTION>
+  <OPTION 
+  value="I1.location='lost/lost07.jpg';">第7頁</OPTION>
+    </SELECT> 
+</P></FORM>
+
+<body ondragstart="return false" onselectstart="return false">
+</BODY></HTML>
