@@ -2,9 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>HARUKA創漫工房</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+    .product-info {
+      border: 2px solid blue;
+      border-radius: 8px;
+      padding: 15px;
+      width: 350px;
+      background-color: #f9f9f9;
+      box-sizing: border-box;
+    }
+
+    /* 平板 (寬度 ≤1024px) */
+    @media (max-width:1024px) {
+      .product-info {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -53,31 +72,7 @@
 .detail-card img:hover {
   transform: scale(1.5); /* 放大 1.5 倍 */
 }
-.product-info {
-  border: 2px solid blue;
-  border-radius: 8px;
-  padding: 15px;
-  width: 500px;               /* 桌面版固定寬度 */
-  background-color: #f9f9f9;
-  box-sizing: border-box;
-}
 
-/* 平板 (螢幕寬度小於 768px) */
-@media (max-width: 768px) {
-  .product-info {
-    width: 100%;              /* 改成佔滿整行 */
-    margin: 0 auto;           /* 置中顯示 */
-  }
-}
-
-/* 手機 (螢幕寬度小於 480px) */
-@media (max-width: 480px) {
-  .product-info {
-    width: 100%;              /* 全寬 */
-    font-size: 14px;          /* 字體縮小一點 */
-    padding: 10px;            /* 內距縮小 */
-  }
-}
 
   </style>
 </head>
